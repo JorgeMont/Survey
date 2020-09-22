@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Encuesta</title>
+</head>
+
+<body>
+    <div class="padre">
+        <div class="descripcion">
+            <!-- Primer punto -->
+            <h1 class="titulo" id="title"> 
+                Home office
+            </h1>
+            <!-- Segundo punto -->
+            <p class="texto" id="description">
+                Esta encuesta tiene como objetivo medir el impacto del home office en las personas
+            </p>
+        </div>
+        <div class="encuesta">
+            <!-- Tercer punto -->
+            <form action="resultados.html" method="GET" id="survey-form">
+                <ul>
+                    <li class="inciso">
+                        <label for="name" class="label" id="name-label">Nombre: </label>
+                        <!-- Cuarto punto -->
+                        <input type="text" id="name" name="user_name" class="input" placeholder="Nombre">
+                    </li>
+                    <li class="inciso">
+                        <label for="email" class="label" id="email-label">Correo: </label>
+                        <!-- Quinto punto -->
+                        <input type="email" id="email" name="user_mail" class="input" placeholder="Correo" >
+                        <!-- Sexto punto (validar formato de correo) -->
+                    </li>
+                    <li class="inciso">
+                        <label for="number" class="label" id="number-label">Edad: </label>
+                        <!-- Puntos 7, 8 y 9 (validacion de numeros y rangos) -->
+                        <input type="number" id="number" name="user_edad" min="0" max="120" class="input" placeholder="Edad">
+                    </li>
+                    <li class="inciso">
+                        <label for="rol" class="label">Qué rol ocupas en tu trabajo: </label>
+                        <!-- <input type="number" id="edad" name="user_edad" min="0" max="120" class="input" placeholder="Edad"> -->
+                        <select required name="user_rol" id="dropdown" class="input">
+                            <option value="" disabled selected hidden>Selecciona un rol</option>
+                            <option value="becario">Becario</option>
+                            <option value="becario">Empleado</option>
+                            <option value="becario">Jefe</option>
+                            <option value="becario">Freelance</option>
+                            <option value="becario">Otro</option>
+                        </select>
+                    </li>
+                    <li class="inciso">
+                        <label for="opinion" class="label">¿Adoptarias el Home Office como metodo de trabajo regular?</label>
+                        <label>
+                            <input checked type="radio" name="user_opinion" value="si" class="input-radio">
+                            Sí
+                        </label>
+                        <label>
+                            <input type="radio" name="user_opinion" value="no" class="input-radio">
+                            No
+                        </label>
+                        <label>
+                            <input type="radio" name="user_opinion" value="maybe" class="input-radio">
+                            Tal vez
+                        </label>
+                    </li>
+                    <li class="inciso">
+                        <label for="comentario" class="label">Comentarios y sugerencias</label>
+                        <textarea name="user_comentario" id="comentario" cols="30" rows="10"></textarea>
+                    </li>
+                    <li class="inciso">
+                        <button type="submit"class="btn-enviar">Enviar</button>
+                    </li>
+                </ul>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
